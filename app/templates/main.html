@@ -1,0 +1,31 @@
+<h1>Reddit Browser</h1>
+<div class="current-subreddits">
+  <span>Current Subreddits</span>
+  <ul>
+    <li class="subreddit-names" ng-repeat="(redditName, obj) in subReddits">
+      {{ redditName }} <i class="fa fa-times-circle close" ng-click="removeSubreddit(redditName)"></i>
+    </li>
+  </ul>
+  <form ng-submit="getSubreddit(subredditName)">
+    <input type="text" placeholder="Enter subreddit" ng-model="subredditName"></input>
+    <button>Go</button>
+  </form>
+</div>
+<nav>
+  <a ng-if="canGetPreviousPage()" href="#" ng-click="previous($event)">prev</a>
+  <a href="#" ng-click="next($event)">next</a>
+</nav>
+<ul>
+  <li class="listings" ng-repeat="listing in listings">
+    <div class="link">
+      <a href="{{listing.data.url}}">{{ listing.data.title }}</a>
+    </div>
+    <div class="info">
+      <span class="votes">{{ listing.data.ups - listing.data.downs }}</span> points | Submitted by <a href="http://www.reddit.com/user/{{ listing.data.author }}">{{ listing.data.author }}</a> to <a href="http://reddit.com/r/{{ listing.data.subreddit }}">{{ listing.data.subreddit }}</a> | <a href="http://www.reddit.com{{ listing.data.permalink }}">{{ listing.data.num_comments }} comments</a>
+    </div>
+  </li>
+</ul>
+<nav>
+  <a ng-if="canGetPreviousPage()" href="#" ng-click="previous($event)">prev</a>
+  <a href="#" ng-click="next($event)">next</a>
+</nav>

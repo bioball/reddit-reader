@@ -1,0 +1,97 @@
+@import url("http://fonts.googleapis.com/css?family=Gilda+Display")
+
+$lightOrange: #F5F1EB
+$brightOrange: #E69935
+$mediumGrey: #888
+$brightBlue: #20A9D6
+$lightBlue: #C5DDE6
+
+html, body
+  height: 100%
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Gilda Display"
+
+li
+  list-style: none
+
+a
+  color: black
+  text-decoration: none
+  font-weight: 700
+  &:hover
+    color: $brightBlue
+
+form
+  input
+    height: 2.5em
+    width: 80%
+    border: none
+    padding: 0 1em
+    box-sizing: border-box
+  button
+    height: 2.5em
+    box-sizing: border-box
+    border: none
+    background-color: $brightBlue
+    color: white
+    font-weight: 700
+    border-radius: 4%
+    width: 5em
+    &:hover
+      background-color: lighten($brightBlue, 5%)
+
+.current-subreddits
+  background-color: #EAEAEA
+  border: 1px solid #DEDEDE
+  padding: 0 0.5em 0.5em 0.5em
+  margin: 1em 0
+  span
+    font-size: 0.7em
+
+.subreddit-names
+  padding: 0.5em
+  margin: 0.5em
+  background-color: #CDCDCD
+  border-radius: 4px
+  font-size: 0.8em
+  font-weight: 700
+
+.close
+  color: #ABABAB
+  &:hover
+    color: #505050
+
+nav
+  font-size: 0.8em
+  margin: 1.5em 0
+  a
+    padding: 0.2em 0.5em
+    background-color: $lightBlue
+    border-radius: 4px
+    color: darken($brightBlue, 15%)
+
+.link > a
+  font-weight: 400
+
+.subreddit-names
+  display: inline-block
+
+.view-container
+  margin-left: 2em
+  max-width: 90vw
+
+.listings
+  padding: 1em
+  border-radius: 4px
+  &:hover
+    background-color: $lightOrange
+
+.info
+  font-size: 0.8em
+  color: $mediumGrey
+  
+.votes
+  color: $brightOrange
+  font-weight: 700

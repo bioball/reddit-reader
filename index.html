@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Subreddit Browser</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="bower_components/normalize-css/normalize.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+<head>
+<body>
+  <div ng-app="reddit">
+    <div ng-view class="view-container"></div>
+  </div>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <script src="app/config/routes.js"></script>
+  <script src="app/factories/apiFactory.js"></script>
+  <script src="app/factories/listingsFactory.js"></script>
+  <script src="app/controllers/mainController.js"></script>
+</body>
+</head>
+</html>
