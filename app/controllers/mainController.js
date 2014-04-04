@@ -1,5 +1,5 @@
 angular.module('reddit')
-.controller('mainController', ['$scope', '$routeParams', 'listingsFactory', function($scope, $routeParams, listingsFactory){
+.controller('mainController', ['$scope', 'listingsFactory', function($scope, listingsFactory){
 
   if(!listingsFactory.currentListings.length){
     listingsFactory.fetchFrontPage().then(function(listings){
