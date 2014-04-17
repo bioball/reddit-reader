@@ -72,15 +72,10 @@ angular.module('reddit')
 
     fetchNewSubreddit: function(subreddit){
       count = 0;
-      var deferred = $q.defer();
       if(subReddits['Front Page']){
         delete subReddits['Front Page'];
       }
-      fetchListings(subreddit)
-      .then(function(listings){
-        deferred.resolve(listings);
-      }, deferred.reject.bind(deferred));
-      return deferred.promise;
+      return fetchListings(subreddit);
     },
 
     removeSubreddit: function(subreddit){
@@ -97,7 +92,7 @@ angular.module('reddit')
       return fetchListings(null, {
         after: before,
         count: count
-      })
+      });
     },
 
     fetchPreviousPage: function(){

@@ -18,7 +18,7 @@
 <ul>
   <li class="listings" ng-repeat="listing in listings">
     <div class="link">
-      <a href="{{listing.data.url}}">{{ listing.data.title }}</a>
+      <a href="{{ listing.data.url }}">{{ listing.data.title }}</a>
     </div>
     <div class="info">
       <span class="votes">{{ listing.data.ups - listing.data.downs }}</span> points | Submitted by <a href="http://www.reddit.com/user/{{ listing.data.author }}">{{ listing.data.author }}</a> to <a href="http://reddit.com/r/{{ listing.data.subreddit }}">{{ listing.data.subreddit }}</a> | <a href="http://www.reddit.com{{ listing.data.permalink }}">{{ listing.data.num_comments }} comments</a>
